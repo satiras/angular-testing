@@ -10,7 +10,7 @@ node{
         }
         archive 'dist.tar.gz'
     }
-    stagr('Test'){
+    stage('Test'){
         docker.image('trion/ng-cli-karma').inside{
             sh 'ng test --progress false --watch false'
         }
